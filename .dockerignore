@@ -1,0 +1,32 @@
+# Compiled binary files
+*.exe
+*.out
+*.o
+
+# Go specific
+*.test
+*.prof
+
+# Dependency directories (remove the ones you don't use)
+/vendor/
+# /go.sum
+# /go.mod
+
+# Output directories
+/bin/
+/out/
+
+# IDE specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+.history/
+
+node_modules
+
+.env
+Dockerfile
