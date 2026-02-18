@@ -4,7 +4,7 @@ Currently only exports registration and expiration time.
 ## Usage
 ```shell
 go build -v -o ./exporter
-QUERY_DOMAINS=google.com ./exporter
+QUERY_DOMAINS=google.com,amazon.com ./exporter
 ```
 
 Then hit `localhost:8889/metrics`.
