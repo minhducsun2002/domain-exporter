@@ -62,6 +62,9 @@ func main() {
 		defer lock.RUnlock()
 		c.Status(200)
 		for domain, info := range current {
+			if info != nil {
+				continue
+			}
 			reg, _ := time.Parse(time.RFC3339, info.Reg)
 			exp, _ := time.Parse(time.RFC3339, info.Exp)
 			_, _ = c.Writer.WriteString(fmt.Sprintf("domain_registered_time{domain=\"%s\"} %d\n", domain, reg.Unix()))
