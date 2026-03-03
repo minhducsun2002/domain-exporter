@@ -62,7 +62,7 @@ func main() {
 		defer lock.RUnlock()
 		c.Status(200)
 		for domain, info := range current {
-			if info != nil {
+			if info == nil {
 				continue
 			}
 			reg, _ := time.Parse(time.RFC3339, info.Reg)
