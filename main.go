@@ -43,6 +43,9 @@ func main() {
 					current[targetDomain] = nil
 					lock.Unlock()
 				}
+				if c == nil {
+					has = false
+				}
 			}
 
 			if !has {
